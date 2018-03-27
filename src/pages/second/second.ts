@@ -15,8 +15,9 @@ import { SecondComponent } from '../../components/second/second';
   templateUrl: 'second.html',
 })
 export class SecondPage {
+  level: string = "0";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private navCtrl: NavController, private navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -24,7 +25,9 @@ export class SecondPage {
   }
 
   navigateToThird(): void {
-    this.navCtrl.push('ThirdPage');
+    this.navCtrl.push('ThirdPage',{
+      level: this.level
+    });
   }
 
   navigateBack(): void {

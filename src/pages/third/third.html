@@ -6,10 +6,10 @@
 -->
 <ion-header  padding >
 <img src='../../assets/imgs/KPMG_RGB.png' height=75>
-<!--   <ion-navbar>
+   <ion-navbar>
     <ion-title>Third Page</ion-title>
   </ion-navbar>
- -->
+
 </ion-header>
 <ion-content  padding>
 <div>
@@ -17,7 +17,10 @@
     <h2 padding>   iCan<br>   Tool</h2>
 
 </div>
-
+<div *ngFor="let topic of topics;let i = index">
+            <button ion-button block (click)="navigateToSel(topic.child)">{{topic.child}} {{topic.wording}}
+            </button>
+    </div>
 <!-- <ion-grid no-padding color="KPMG2">
     <ion-row>
         <ion-col col-6><button  color="KPMG2" text-wrap ion-button>1. First Grid entry with a lot of text in there</button></ion-col>
@@ -33,5 +36,4 @@
 </ion-content>
 <ion-footer padding>
     <button ion-button (click)="setRootPageToHome()" color="KPMG1">Start</button>
-
 </ion-footer>
