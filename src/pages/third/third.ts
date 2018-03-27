@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TopicService } from '../../providers/topic-service/topic.service';
 
-import {} from '../../models/topic.interface';
+import {Topic} from '../../models/topic.interface';
 
 /**
  * Generated class for the ThirdPage page.
